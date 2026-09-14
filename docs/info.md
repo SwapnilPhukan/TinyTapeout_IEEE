@@ -1,20 +1,22 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+# Full Adder
 
 ## How it works
 
-Explain how your project works
+This project implements a 1-bit full adder using combinational logic.
 
-## How to test
+The full adder takes three inputs:
 
-Explain how to use your project
+- `A` — first input bit
+- `B` — second input bit
+- `Cin` — carry input
 
-## External hardware
+It produces two outputs:
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+- `Sum` — the sum bit
+- `Carry` — the carry output
+
+The logic is:
+
+```text
+Sum   = A XOR B XOR Cin
+Carry = (A AND B) OR (Cin AND (A XOR B))
